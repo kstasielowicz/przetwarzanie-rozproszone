@@ -65,7 +65,7 @@ W bazie istnieją produkty o ID `123` oraz `124`.
 - **Przez przeglądarkę:** Otwórz link: http://127.0.0.1:8002/stock/123
 - **Przez cURL (Terminal 3):** 
   ```bash
-  curl [http://127.0.0.1:8002/stock/123](http://127.0.0.1:8002/stock/123)
+  curl http://127.0.0.1:8002/stock/123
   ```
 **Oczekiwany wynik:** Zwrócony zostanie kod `200 OK` i JSON: `{"productId": 123, "quantity": 15}`. W logach serwerów będzie widać poprawną komunikację.
 
@@ -75,6 +75,6 @@ Pytamy o produkt, którego nie ma w bazie (np. ID `999`).
 - **Przez przeglądarkę:** Otwórz link: http://127.0.0.1:8002/stock/999
 - **Przez cURL (Terminal 3):**
   ```bash
-  curl [http://127.0.0.1:8002/stock/999](http://127.0.0.1:8002/stock/999)
+  curl http://127.0.0.1:8002/stock/999
   ```
 **Oczekiwany wynik:** Zwrócony zostanie kod `404 Not Found` i JSON: `{"detail": "Product not found"}`. Serwis Magazynowy odrzuci zapytanie, ponieważ Serwis Produktów zgłosił brak takiego ID.
